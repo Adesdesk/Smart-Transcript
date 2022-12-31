@@ -167,7 +167,8 @@ button {
 
 
 #status {
-  color: #0000BB;
+  color: green;
+  font-size: 12px;
   align-items: center;
   text-align: center;
   font-family: "Trebuchet MS", Helvetica, sans-serif;

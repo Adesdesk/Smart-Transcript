@@ -92,12 +92,12 @@ export const getCurrentWalletConnected = async () => {
 
 
 
-async function loadContract() {
+/*async function loadContract() {
   return new web3.eth.Contract(contractABI, contractAddress);
-}
+}*/
 
 export const safeMint = async (url, name, description) => {
-  if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
+  if (url.trim() === "" || name.trim() === "" || description.trim() === "") {
     return {
       success: false,
       status: "Kindly fill all fields before you mint.",
@@ -127,7 +127,7 @@ export const safeMint = async (url, name, description) => {
     to: contractAddress, // Required except during contract publications.
     from: window.ethereum.selectedAddress, // must match user's active address.
     data: window.contract.methods
-      .mintNFT(window.ethereum.selectedAddress, tokenURI)
+      .safeMint(window.ethereum.selectedAddress, tokenURI)
       .encodeABI(),
   };
 
@@ -139,7 +139,7 @@ export const safeMint = async (url, name, description) => {
     return {
       success: true,
       status:
-        "You may want to see the transaction on Etherscan: https://ropsten.etherscan.io/tx/" +
+        "Done. View transaction details on Etherscan: https://goerli.etherscan.io/address/" +
         txHash,
     };
   } catch (error) {
