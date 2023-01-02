@@ -7,9 +7,9 @@ function Footer() {
     <div className="footerSpace">
       <footer className="footer0">
           <p className="footerTxt">
-            <span>...powered by adesdesk</span>
+            <span>Original idea, design and implementation by Adeola David Adelakun</span>
             <br></br>
-            Copyright &copy; 2022
+            &copy; 2022
           </p>
       </footer>
     </div>

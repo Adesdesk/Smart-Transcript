@@ -110,7 +110,7 @@ const Verify = (props) => {
           </div>
                 
                   <p id="instructions">
-                  <span className="attention">Authorized persons only!</span>
+                  <span className="attention">Authorized handlers only!</span>
                   <br></br>
                     Kindly input Token ID corresponding to the Transcript or Certificate you wish to revoke 
                      before you click <span className="attention">Burn Transcript</span> below

@@ -29,11 +29,11 @@
 .st_image {
 	float: right;
 	padding: 0 20px 20px 0;
-	margin-left: 10px;
-	height: 180px;
-  width: 180px;
+	margin-left: 20px;
+	height: 150px;
+  width: 150px;
   border-radius: 10px 100px / 120px;
-  box-shadow: 3px 4px 3px 4px #000000;
+  box-shadow: 3px 4px 3px 4px #0000BB;
 }
 
 .boxes{
@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: center;
 	border-radius: .5rem;
-	background: #808588;
+	background: ##ffffff;
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 20px;
@@ -62,22 +62,28 @@
 }
 
 p.boxedText0 {
-	/*font-weight: bold;*/
+	font-weight: bold;
 	position: relative;
 	margin-top: 20px;
 	margin-left: 5px;
 	margin-right: 5px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	align-items: center; 
 }
 
+.how_to{
+	background-color: #0000BB;
+	cursor: pointer;
+	color: #ffffff;
+}
+
 p.boxedText1 {
-	/*font-weight: bold;*/
+	font-weight: bold;
 	position: relative;
 	margin-left: 5px;
 	margin-right: 5px;
-	color: #ffffff;
+	color: #000000;
 	align-items: center;
 	text-align: center;
 }

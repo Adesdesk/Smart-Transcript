@@ -22,6 +22,11 @@ const Home = () => {
     options('/verify');
   };
 
+  const howTo = () => {
+    // navigate to the How To page
+    options('/how-to');
+  };
+
   return (
     <div className="home">
       <div className="container">
@@ -58,10 +63,14 @@ const Home = () => {
 
             <div className='tc_styles'>
                 <div className="grid one grow">
-                <p className="boxedText0">Tokenize academic transcripts and certificates of your graduates</p>
-                  <br></br>
+                <p className="boxedText0">To tokenize academic transcripts or certificates, 
+                upload a copy in PDF format to IPFS and save the hash generated. This will be 
+                required as input to the dashborad when you tokenize.</p>
+                <br></br>
+
                   <div>
-                      <p className="boxedText1">This lets you create transcript from scratch</p>
+                      <p className="boxedText1">If you do not adequately understand the above
+                      instructions, please visit the <span className="how_to" onClick={howTo}>How To</span> page before you click the button below</p>
                   </div>
                   <br></br>
                   <button id="starterButton" onClick={tokenizeTranscript}>
@@ -71,23 +80,29 @@ const Home = () => {
                 </div>
 
                 <div className="grid two grow">
-                <p className="boxedText0">You can review previously tokenized transcripts and certificates to upgrade or degrade them.</p>
+                <p className="boxedText0">You (or anybody) can retrieve a copy of previously tokenized transcripts and certificates 
+                using the token ID. 
+                This feature helps a third party verify that a copy is original, and was actually issued by the said institution.</p>
                   <br></br>
                   <div>
-                      <p className="boxedText1">This lets you create transcript from scratch</p>
+                      <p className="boxedText1">If you do not adequately understand the above
+                      instructions, please visit the <span className="how_to" onClick={howTo}>How To</span> page before you click the button below</p>
                   </div>
                   <br></br>
                   <button id="manageCopies" onClick={verifyTranscript}>
-                    Verify Copies
+                    Verify Copy
                   </button>
                   <br></br>
                 </div>
 
                 <div className="grid three grow">
-                  <p className="boxedText0">You can also revoke or suspend previously tokenized transcripts and certificates.</p>
+                  <p className="boxedText0">This option helps an institution reserve the right to revoke previously issued and tokenized 
+                  certificates and corresponding academic transcripts. It should be used only in the event that an alumnus is found undeserving of the
+                  an earlier earned qualification.</p>
                   <br></br>
                   <div>
-                      <p className="boxedText1">This lets you create transcript from scratch</p>
+                      <p className="boxedText1">If you do not adequately understand the above
+                      instructions, please visit the <span className="how_to" onClick={howTo}>How To</span> page before you click the button below</p>
                   </div>
                   <br></br>
                   <button id="revoke" onClick={revokeTranscript}>
