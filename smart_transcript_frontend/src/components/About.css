@@ -20,6 +20,7 @@
 	margin-right: auto;*/
 	text-align: center;
 	color: #ffffff;
+	line-height: 25px;
 	font-size: 40px;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,	
   	0 20px 30px rgba(0, 0, 0, 0.9);
@@ -30,5 +31,5 @@
 	color: #ffffff;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,	
   	0 20px 30px rgba(0, 0, 0, 0.9);
-	font-size: 25px;
+	font-size: 20px;
 }

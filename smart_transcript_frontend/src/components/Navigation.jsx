@@ -10,15 +10,15 @@ function Navigation() {
     const text = circle.dataset.text;
     const characters = text.split('');
 
-    const deltaAngle = 360 / characters.length;
-    const distanceFromCenter = 256;
+    const varyAngle = 360 / characters.length;
+    const radius = 200;
 
     characters.forEach((character, index) => {
       const span = document.createElement('span');
       span.innerText = character;
 
-      const rotateY = `rotateY(${index * deltaAngle}deg)`;
-      const translateZ = `translateZ(${distanceFromCenter}px)`;
+      const rotateY = `rotateY(${index * varyAngle}deg)`;
+      const translateZ = `translateZ(${radius}px)`;
       span.style.transform = `${rotateY} ${translateZ}`;
 
       circle.appendChild(span);
@@ -29,7 +29,7 @@ function Navigation() {
         <div className="container0">
         
         <div className="body2">
-        <div id="circle" data-text="Smart-Transcript DApp by Adesdesk "></div>
+        <div id="circle" data-text="Smart-Transcript DApp by Adeola "></div>
           </div>
           <NavLink className="navbar-brand grow" to="/">
             <span className="brandname_a">Smart-Transcript 
@@ -62,8 +62,8 @@ function Navigation() {
               </li> 
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
+                <NavLink className="nav-link" to="/the-developer">
+                  The Developer
                 </NavLink>
               </li>                
             </ul>

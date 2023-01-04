@@ -27,7 +27,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/tokenize" element={<Tokenize />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/the-developer" element={<Contact />} />
           <Route path="/blacklist" element={<Blacklist />} />
           <Route path="/how-to" element={<HowTo />} />
           <Route path="/verify" element={<Verify />} />

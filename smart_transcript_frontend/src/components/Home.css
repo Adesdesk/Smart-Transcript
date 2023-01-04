@@ -36,6 +36,15 @@
   box-shadow: 3px 4px 3px 4px #0000BB;
 }
 
+.my_pic {
+  float: right;
+  margin-left: 20px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 3px 4px 3px 4px #0000BB;
+}
+
 .boxes{
   	color: white;
   	/*text-align: center;*/

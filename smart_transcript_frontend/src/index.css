@@ -5,13 +5,12 @@ html {
 }
 
 .navbar {
-  border-radius: 0px 0px 80px 80px;
+  border-radius: 100px 100px 100px 100px;
   box-shadow: 4px 5px 4px 5px #808588;
   background-color: #0000BB;
   border-top: 0;
   margin-left: 3rem;
   margin-right: 3rem;
-
 }
 
 .current {
@@ -44,6 +43,10 @@ html {
   text-decoration: none;
 }
 
+ul.certifications {
+  list-style-type: circle;
+}
+
 ul {
   list-style: none
 }
@@ -55,7 +58,6 @@ ul {
 .text-center {
   color: #0000BB;
 }
-
 
 body {
 
@@ -86,7 +88,6 @@ body {
   margin-right: 5rem;
 }
 
-
 #instructions {
   color: #000000;
   padding-top: 20px;
@@ -113,6 +114,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.subh {
+  color: #0000BB;
+  font-weight: bold;
+}
+
+.mainh {
+  color: #0000BB;
+  font-weight: bolder;
 }
 
 .Minter, .Minter2 {
@@ -316,7 +327,7 @@ p {
   margin-left: 3rem;
   margin-right: 3rem;
   padding: auto;
-  border-radius: 0px 0px 80px 80px;
+  border-radius: 80px 80px 80px 80px;
   align-items: center;
   justify-content: center;
   display: grid;
@@ -330,5 +341,5 @@ p {
   background: #0000BB;
   color: #ffffff;
   overflow: hidden;
-  box-shadow: 3px 4px 3px 4px #ffffff;
+  box-shadow: 3px 4px 3px 4px #F57F17;
 }
