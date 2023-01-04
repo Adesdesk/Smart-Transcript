@@ -22,8 +22,8 @@ function HowTo() {
               />
               <br></br>
               <br></br>
-              On the Home page are three rectangular fields, each with a button that helps you navigate 
-              to one of three dashboards. You can navigate to the Tokenize dashboard to simply input details of 
+              On the Home page are two capsule-shaped fields, each with a button that helps you navigate 
+              to one of two dashboards. You can navigate to the Tokenize dashboard to simply input details of 
               a copy of academic transcript or certificate and mint a token that corresponds to a public 
               record of the authenticity of that copy as issued by your institution.
             
@@ -49,7 +49,7 @@ function HowTo() {
               These input items will combine to form the metadata of a token you mint by tokenizing each document. 
               Ensure to have these three items for each corresponding copy of certificate or transcript you intend to tokenize.
               <br></br>
-              5. Return to the Smart-Transcript Home page and click on the Tokenize button available on the first rectangular 
+              5. Return to the Smart-Transcript Home page and click on the Tokenize button available on the first capsule-shaped 
               field to get navigated to the Tokenize dashboard.
               <br></br>
               6. Mindfully input the earlier saved details from step 4, each in the appropriate field.
@@ -68,7 +68,7 @@ function HowTo() {
               <h3>Option 2 - Verify Copy</h3>
               <span id="status">This step does not require payments of any kind.</span>
               <h3>To verify a copy, you are required to:</h3>
-              1. Click on the Verify Copy button on the second rectangular field of the Smart-Transcript home page to navigate to the 
+              1. Click on the Verify Copy button on the second capsule-shaped field on the Smart-Transcript home page to navigate to the 
               verification dashboard.
               <br></br>
               2. Input the address of the token you intend to verify.
