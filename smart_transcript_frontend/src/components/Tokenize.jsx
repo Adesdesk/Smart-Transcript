@@ -47,7 +47,7 @@ const Tokenize = (props) => {
           setStatus("Write something in the text-field above.");
         } else {
           setWallet("");
-          setStatus("Please link your Metamask using the <Get Started> button.");
+          setStatus("Please link your Metamask using the <Connect wallet> button.");
         }
       });
     } else {
@@ -90,6 +90,7 @@ const Tokenize = (props) => {
           <div className="box">
           </div>
           <div className="inner_box">
+          <br></br>
             <h1 className="font-weight-normal grow">Create Smart Transcript</h1>
             <p id="instructions">
               Click on the button below to connect your institution's wallet
@@ -110,7 +111,7 @@ const Tokenize = (props) => {
           </div>
                 
                   <p id="instructions">
-                    Kindly input name, comment, and link to official Transcript 
+                    Kindly input name, comment, and link to official transcript or certificate 
                     <br></br>
                     copy for corresponding graduates before you click <span className="attention">Tokenize Transcript</span> below
                   </p>
@@ -135,7 +136,7 @@ const Tokenize = (props) => {
                       onChange={(event) => setDescription(event.target.value)}
                     />
                   </form>
-                  <button id="mintButton" onClick={onMintPressed}>
+                  <button id="walletButton" onClick={onMintPressed}>
                     Tokenize Transcript
                   </button>
                   <p id="status">

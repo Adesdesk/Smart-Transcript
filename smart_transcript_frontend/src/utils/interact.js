@@ -1,11 +1,9 @@
 import React from 'react';
-
 import {pinJSONToIPFS} from './pinata.js';
 require('dotenv').config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey); 
-
 const contractABI = require('../smart_transcript_abi.json')
 const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";
 
@@ -91,10 +89,10 @@ export const getCurrentWalletConnected = async () => {
 };
 
 
-
-/*async function loadContract() {
+// get instance of my contract
+async function loadContract() {
   return new web3.eth.Contract(contractABI, contractAddress);
-}*/
+}
 
 export const safeMint = async (url, name, description) => {
   if (url.trim() === "" || name.trim() === "" || description.trim() === "") {
@@ -149,5 +147,3 @@ export const safeMint = async (url, name, description) => {
     };
   }
 };
-
-

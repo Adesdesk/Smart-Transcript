@@ -1,17 +1,18 @@
 import React from "react";
-
 import { useEffect, useState } from "react";
 import { 
   connectWallet,
+  _burn,
   getCurrentWalletConnected 
  } from "../utils/interact.js";
 
-const Blacklist = (props) => {
+const Verify = (props) => {
 
   // list of state variables
   const [walletAddress, setWallet] = useState("");
   const [status, setStatus] = useState("");
   const [tokenId, setTokenId] = useState("");
+  const [tokenUri, setTokenUri] = useState("");
  
 
   useEffect(() => {
@@ -64,6 +65,11 @@ const Blacklist = (props) => {
     setTokenId(event.target.value);
   }
 
+  const handleBurn = async () => {
+    await _burn(tokenId);
+  }
+
+
   // the user inteface
   return (
     <div className="mint__">
@@ -72,10 +78,10 @@ const Blacklist = (props) => {
           <div className="box">
           </div>
           <div className="inner_box">
-            <h1 className="font-weight-normal" grow>Revoke Certificate / Transcript</h1>
+            <h1 className="font-weight-normal" grow>Verify Smart Transcript</h1>
             <p id="instructions">
-              Click on the button below to connect your institution's wallet
-              and revoke (burn) previously published transcripts.
+              Click on the button below to connect your virtual wallet
+              and authorize verification of transcripts.
             </p>
               <button id="walletButton" onClick={connectWalletPressed}>
                 {walletAddress.length > 0 ? (
@@ -91,10 +97,8 @@ const Blacklist = (props) => {
           </div>
                 
                   <p id="instructions">
-                  <span className="attention">Authorized handlers only!</span>
-                  <br></br>
-                    Kindly input Token ID corresponding to the Transcript or Certificate you wish to revoke 
-                     before you click <span className="attention">Burn Transcript</span> below
+                    Kindly input Token ID corresponding to a Transcript or certificate to be verified
+                     before you click <span className="attention">Verify Transcript</span> below
                   </p>
                   <div className="Minter">
                   <form>
@@ -105,8 +109,8 @@ const Blacklist = (props) => {
                       onChange={handleChange}
                     />
                   </form>
-                  <button id="mintButton" /*add click behaviour*/>
-                    Burn Transcript
+                  <button id="mintButton" onClick={handleBurn}>
+                    Verify Transcript
                   </button>
                   <p id="status">
                     {status}
@@ -118,4 +122,11 @@ const Blacklist = (props) => {
       );
 }
 
-export default Blacklist;
+export default Verify;
+
+
+
+
+
+
+

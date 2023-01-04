@@ -5,7 +5,7 @@ html {
 }
 
 .navbar {
-  border-radius: 20px 80px;
+  border-radius: 0px 0px 80px 80px;
   box-shadow: 4px 5px 4px 5px #808588;
   background-color: #0000BB;
   border-top: 0;
@@ -52,6 +52,10 @@ ul {
   display: inline-block;
 }
 
+.text-center {
+  color: #0000BB;
+}
+
 
 body {
 
@@ -67,7 +71,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#placeholder {
+#placeholder, #inputAddress {
   text-align: center;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12PX;
@@ -81,6 +85,7 @@ body {
   margin-left: 5rem;
   margin-right: 5rem;
 }
+
 
 #instructions {
   color: #000000;
@@ -128,10 +133,16 @@ code {
   text-align: center;
 
 }
+h3 {
+  color: #0000BB;
+}
 
 .Minter2 {
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  justify-items: center;
+
+  margin-left: 2.5rem;
+ /* margin-right: auto;*/
 }
 
 input {
@@ -150,7 +161,7 @@ input:focus {
   border-color: rgba(4, 4, 5, 0.4);
 }
 
-h2 {
+h2, .h22 {
   color: #0000BB;
   font-size: 16px;
   font-weight: normal;
@@ -203,9 +214,12 @@ p {
 }
 
 #starterButton {
-  color: #0000BB;
+  /*color: #0000BB;
+  border-color: #0000BB;*/
   margin-top: 30px;
-  border-color: white;
+  color: #0000BB;
+  margin-top: 5px;
+  border-color: #ffffff;
   
 }
 
@@ -222,7 +236,7 @@ p {
 #manageCopies {
   color: #0000BB;
   margin-top: 5px;
-  border-color: white;
+  border-color: #ffffff;
   
 }
 
@@ -240,17 +254,24 @@ p {
 #walletButton {
   margin-left: 0;
   margin-top: 5px;
-  color: #ffffff;
+  color: #0000BB;
+  margin-top: 5px;
+  border-color: #0000BB;
+  /*color: #ffffff;
   background-image: linear-gradient(#808588, #808588);
-  border-color: white;
+  border-color: white;*/
   }
 
 #mintButton {
   margin-left: 0;
   margin-top: 5px;
-  color: #ffffff;
+  color: #0000BB;
+  margin-top: 5px;
+  border-color: #ffffff;
+
+  /*color: #ffffff;
   background-image: linear-gradient(#808588, #808588);
-  border-color: white;
+  border-color: white;*/
 }
 
   .st_logo {
@@ -271,6 +292,43 @@ p {
   margin-top:70px;
 }
 
-.footer{
+#circle {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-animation 8s linear infinite;
+}
 
+#circle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes rotate-animation {
+  0% { transform: rotateY(360deg) rotateX(20deg); }
+  100% { transform: rotateY(0) rotateX(-20deg); }
+}
+
+/* Misc.*/ 
+.body2 {
+  height: 15vh;
+  /*margin: auto;*/
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding: auto;
+  border-radius: 0px 0px 80px 80px;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 3vw;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,  
+    0 20px 30px rgba(0, 0, 0, 0.0);
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  background: #0000BB;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 3px 4px 3px 4px #ffffff;
 }

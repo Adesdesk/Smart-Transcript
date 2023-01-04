@@ -8,7 +8,7 @@
 	margin-top: 10px;
 	margin-left: 100px;
 	margin-right: 100px;
-	grid-gap: 40px;
+	grid-gap: 50px;
 	/*display: grid;
 	grid-template-columns: 1fr 1fr;
   grid-auto-rows: 60px;
@@ -43,11 +43,12 @@
 
 .grid {
 	display: inline-block;
-	box-shadow: 3px 4px 3px 4px #0000bb;
+	box-shadow: 3px 4px 3px 4px #0000BB;
 	/*display: flex;*/
   align-items: center;
   justify-content: center;
-	border-radius: .5rem;
+  border-radius: 80px 80px;
+	/*border-radius: .5rem;*/
 	background: ##ffffff;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -64,26 +65,33 @@
 p.boxedText0 {
 	font-weight: bold;
 	position: relative;
+	font-size: 18px;
 	margin-top: 20px;
-	margin-left: 5px;
-	margin-right: 5px;
-	color: #000000;
+	margin-bottom: 0;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-left: 7px;
+	margin-right: 7px;
+	color: #ffffff;
 	text-align: center;
 	align-items: center; 
 }
 
 .how_to{
-	background-color: #0000BB;
+	background-color: #FFFFFF;
 	cursor: pointer;
-	color: #ffffff;
+	color: #0000BB;
 }
 
 p.boxedText1 {
 	font-weight: bold;
 	position: relative;
-	margin-left: 5px;
-	margin-right: 5px;
-	color: #000000;
+	font-size: 18px;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #ffffff;
 	align-items: center;
 	text-align: center;
 }
