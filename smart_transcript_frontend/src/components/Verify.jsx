@@ -20,7 +20,7 @@ function Verify() {
         <div className="outer_box">
           <div className="inner_box">
           <br></br>
-            <h1 className="font-weight-normal" grow>Verify Smart Transcript</h1>
+            <h1 className="font-weight-normal" grow>Verify Transcript</h1>
             <p id="instructions">
               This process is free of all forms of payable fees. You do not need to connect an 
               ethereum wallet to complete verification of transcripts and certificates.
