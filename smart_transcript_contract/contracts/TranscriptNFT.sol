@@ -26,8 +26,9 @@ contract Create_Smart_Transcript is ERC721, ERC721URIStorage, ERC721Burnable, Ow
     }
 
 // mint and issue tokenized transcript - payment required
+// exact amount payable to be updated after trial phase
     function safeMint(address to, string memory uri) public virtual payable {
-        require(msg.value >= 10 wei, "Payment amount not matched");
+        require(msg.value >= 0 wei, "Payment amount not matched");
 
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
@@ -58,5 +59,3 @@ contract Create_Smart_Transcript is ERC721, ERC721URIStorage, ERC721Burnable, Ow
 
 
 // @author - Adeola David Adelakun
-
-// sample uri: https://gateway.pinata.cloud/ipfs/QmXRc4BdrvipFqpJnsNQeyWtQ5MrSd22835S4zqXTEr1dM

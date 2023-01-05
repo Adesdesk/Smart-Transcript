@@ -5,7 +5,8 @@ const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey); 
 const contractABI = require('../smart_transcript_abi.json')
-const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";
+const contractAddress = "0xaAb57c3Eaf3E07B4Ff25d1DF96b972fF764945F2";
+/*const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";*/
 
 
 
@@ -137,7 +138,7 @@ export const safeMint = async (url, name, description) => {
     return {
       success: true,
       status:
-        "Done. View transaction details on Etherscan: https://goerli.etherscan.io/address/" +
+        "Document tokenized successfully. View transaction details on Etherscan: https://goerli.etherscan.io/address/" +
         txHash,
     };
   } catch (error) {
