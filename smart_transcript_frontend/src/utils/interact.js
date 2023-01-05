@@ -90,9 +90,9 @@ export const getCurrentWalletConnected = async () => {
 
 
 // get instance of my contract
-async function loadContract() {
+/*async function loadContract() {
   return new web3.eth.Contract(contractABI, contractAddress);
-}
+}*/
 
 export const safeMint = async (url, name, description) => {
   if (url.trim() === "" || name.trim() === "" || description.trim() === "") {

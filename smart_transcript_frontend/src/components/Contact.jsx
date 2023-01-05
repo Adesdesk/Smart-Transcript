@@ -1,14 +1,13 @@
-/*import React from "react";*/
-/*import React, { useRef } from "react";*/
-import React, { useEffect } from 'react';
-import Img from "../smart_transcript_background1.jpg";
+import React from "react";
+import SocialMediaIcons from './SocialMediaIcons';
 import Img2 from "../Adeola_dp.png";
+import './SocialMediaIcons.css'; 
 
 
 function Contact() {
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
       e.preventDefault();
-    };
+    };*/
   return (
     <div className="contact" grow>
     <div className="container">
@@ -16,19 +15,24 @@ function Contact() {
       
       <h1 className="font-weight-normal">Adeola David Adelakun</h1>
       <h4 className="font-weight-normal">Solidity Developer</h4>
+      
             
+            <div className="icns">
             <img
               className="my_pic grow"
               src={Img2} alt="Adeola"
-            /> 
+            />
+            <SocialMediaIcons />
+            </div>
 
+            <div className="cntactTxt">
             <h3>Reach Adeola</h3>
             <p>
               Email: adesdesk@outlook.com
               <br></br>
               Phone: +2347062587509
               <br></br>
-              Abuja, Nigeria.
+              Abuja, FCT Nigeria.
               <br></br>
               https://github.com/adesdesk
               <br></br>
@@ -88,7 +92,7 @@ function Contact() {
               and is still developing experience from real workplaces of international repute. 
               <h3>Experience</h3>
               <p className="mainh">Grandida LLC <br></br>
-              <span className="subh">Miramar, Florida, July 2021 till date <br></br> Solidity Developer </span> </p>
+              <span className="subh">Miramar, Florida, July 2022 till date <br></br> Solidity Developer </span> </p>
               <ul className="certifications">
                 <li>Decentralized Applications Development: Designed, developed and deployed full-stack decentralized applications.</li>
                 <li>Desktop Applications Development: Designed and developed desktop applications tailored at meeting various real-life needs.</li>
@@ -130,7 +134,8 @@ function Contact() {
             <ul className="certifications">
               <li>Physics Olympiad Merit Award – National Mathematical Center, Abuja, Nigeria.</li>
             </ul>
-            </p>     
+            </p>
+          </div>       
       </div>
       </div>    
   )

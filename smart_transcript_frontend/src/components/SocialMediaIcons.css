@@ -1,0 +1,33 @@
+.fa.fa-facebook {
+	color: #0000BB;
+}
+
+.fa {
+	padding: 10px;
+	text-decoration: none;
+	font-size: 2rem;
+	float: right;
+}
+
+.fa.fa-twitter {
+	color: rgb(29, 155, 240);
+}
+
+.fa.fa-instagram {
+	color: brown;
+}
+
+
+.fa.fa-linkedin {
+	padding-bottom: 40px;
+	color: 0A66C2;
+}
+
+/*.icns {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.cntactTxt {
+	padding-top: 50px;
+}*/

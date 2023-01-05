@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-html {
-  
+.active {
+  background-color: #F57F17;  
 }
 
 .navbar {
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 0px 0px 0px 0px;
+  /*border-radius: 100px 100px 100px 100px;*/
   box-shadow: 4px 5px 4px 5px #808588;
   background-color: #0000BB;
   border-top: 0;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  /*margin-left: 3rem;
+  margin-right: 3rem;*/
 }
 
 .current {
@@ -117,6 +118,7 @@ code {
 }
 
 .subh {
+  font-size: 15px;
   color: #0000BB;
   font-weight: bold;
 }
