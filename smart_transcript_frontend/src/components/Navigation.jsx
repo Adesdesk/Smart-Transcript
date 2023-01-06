@@ -36,7 +36,7 @@ function Navigation() {
         </div>
           {/* Navigation menu links */}
           <a
-            className="navbar-brand grow" /*{`nav-link ${location.pathname === '/' ? 'active' : ''}`}*/
+            className="navbar-brand grow"
             href="/"
           >
             <span className="brandname_a">Smart-Transcript 
@@ -78,7 +78,7 @@ function Navigation() {
                       className={`nav-link ${location.pathname === '/the-developer' ? 'active' : ''}`}
                       href="/the-developer"
                     >
-                      The Developer
+                      Developer
                     </a>
                    </li>
                 </ul>
