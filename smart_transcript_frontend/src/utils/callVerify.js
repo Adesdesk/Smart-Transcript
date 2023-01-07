@@ -1,48 +1,32 @@
-const web3 = createAlchemyWeb3(alchemyKey);
-/*import contract from 'truffle-contract';*/
+import React from 'react';
+import {pinJSONToIPFS} from './pinata.js';
 require('dotenv').config();
+const web3 = createAlchemyWeb3(alchemyKey);
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const contractABI = require('../smart_transcript_abi.json')
-const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";
-
-const network = '<NETWORK_NAME>'; // Replace with the name of the Ethereum network
-/*const abi = [{...}]; // Replace with the contract ABI*/
+const contractAddress = "0xaAb57c3Eaf3E07B4Ff25d1DF96b972fF764945F2";
 
 
-import Moralis  from 'moralis';
-import { EvmChain } from '@moralisweb3/evm-utils';
+function MyComponent() {
+  async function handleButtonClick() {
+    // Make sure web3 is available and the user is connected
+    if (!createAlchemyWeb3) {
+      return;
+    }
 
-try {
-    const chain = EvmChain.ETHEREUM;
+    // Create a new instance of the ERC721 contract
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-    const address = '0x1234567890123456789012345678901234567890';
+    // Call the tokenURI function with the ID of the token you want to get the URI for
+    const tokenURI = await contract.methods.tokenURI(tokenId).call();
 
-    await Moralis.start({
-        apiKey: 'YOUR_API_KEY',
-        // ...and any other configuration
-    });
+    // Do something with the returned URI
+    console.log(tokenURI);
+  }
 
-    const response = await Moralis.EvmApi.nft.getNFTContractMetadata({
-        address,
-        chain,
-    });
-
-    console.log(response?.result);
-} catch (e) {
-    console.error(e);
+  return (
+    <button onClick={handleButtonClick}>Get Token URI</button>
+  );
 }
 
-/*async function getTokenURI(tokenId) {
-  const web3 = new Web3(new Web3.providers.HttpProvider(`https://${network}.infura.io/v3/<alchemyKey>`));
-  const ERC721Contract = contract(contractABI);
-  ERC721Contract.setProvider(web3.currentProvider);
-  const instance = await ERC721Contract.at(contractAddress);
-
-  try {
-    const tokenURI = await instance.tokenURI(tokenId);
-    console.log(`Token URI: ${tokenURI}`);
-  } catch (err) {
-    console.error(`Error calling tokenURI: ${err}`);
-  }
-}*/
