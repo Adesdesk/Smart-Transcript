@@ -5,14 +5,16 @@ import './SocialMediaIcons.css';
 
 
 function Contact() {
-  
+  /*const handleSubmit = (e) => {
+      e.preventDefault();
+    };*/
   return (
     <div className="contact" grow>
     <div className="container">
     <br></br>
       
       <h1 className="font-weight-normal">Adeola David Adelakun</h1>
-      <h4 className="font-weight-normal">Frontend / Solidity Developer</h4>
+      <h4 className="font-weight-normal">Solidity Developer</h4>
       
             
             <div className="icns">

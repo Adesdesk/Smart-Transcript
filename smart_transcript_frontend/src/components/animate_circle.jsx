@@ -6,8 +6,8 @@ function CircleText() {
     const text = circle.dataset.text;
     const characters = text.split('');
 
-    const varyAngle = 360 / characters.length;
-    const radius = 200;
+    const deltaAngle = 360 / characters.length;
+    const distanceFromCenter = 256;
 
     characters.forEach((character, index) => {
       const span = document.createElement('span');
