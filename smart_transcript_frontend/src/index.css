@@ -80,10 +80,6 @@ body {
   font-size: 12PX;
 }
 
-.container0: {
-  position: absolute;  
-}
-
 .container {
   margin-left: 5rem;
   margin-right: 5rem;
@@ -257,10 +253,6 @@ p {
   color: #0000BB;
   margin-top: 30px;
   border-color: white;
-  
-}
-
-.right_button {
   
 }
 

@@ -9,7 +9,31 @@ const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";
 const network = '<NETWORK_NAME>'; // Replace with the name of the Ethereum network
 /*const abi = [{...}]; // Replace with the contract ABI*/
 
-async function getTokenURI(tokenId) {
+
+import Moralis  from 'moralis';
+import { EvmChain } from '@moralisweb3/evm-utils';
+
+try {
+    const chain = EvmChain.ETHEREUM;
+
+    const address = '0x1234567890123456789012345678901234567890';
+
+    await Moralis.start({
+        apiKey: 'YOUR_API_KEY',
+        // ...and any other configuration
+    });
+
+    const response = await Moralis.EvmApi.nft.getNFTContractMetadata({
+        address,
+        chain,
+    });
+
+    console.log(response?.result);
+} catch (e) {
+    console.error(e);
+}
+
+/*async function getTokenURI(tokenId) {
   const web3 = new Web3(new Web3.providers.HttpProvider(`https://${network}.infura.io/v3/<alchemyKey>`));
   const ERC721Contract = contract(contractABI);
   ERC721Contract.setProvider(web3.currentProvider);
@@ -21,6 +45,4 @@ async function getTokenURI(tokenId) {
   } catch (err) {
     console.error(`Error calling tokenURI: ${err}`);
   }
-}
-
-getTokenURI(<TOKEN_ID>); // Replace with the ID of the token you want to retrieve the URI for
+}*/

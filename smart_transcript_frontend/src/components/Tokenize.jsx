@@ -1,11 +1,11 @@
 import React from "react";
 /*import Img from '../smart_transcript_background1.jpg';*/
 import { useEffect, useState } from "react";
-import { 
+import {
   connectWallet,
   safeMint,
-  getCurrentWalletConnected 
- } from "../utils/interact.js";
+  getCurrentWalletConnected
+} from "../utils/interact.js";
 
 const Tokenize = (props) => {
 
@@ -16,7 +16,7 @@ const Tokenize = (props) => {
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
 
-  
+
   /*useEffect(async () => {
     const { address, status } = await getCurrentWalletConnected();
 
@@ -25,18 +25,18 @@ const Tokenize = (props) => {
 
     addWalletListener();
   }, []);*/
- 
+
 
   useEffect(() => {
-  async function fetchData() {
-    // We await here
-    const {address, status} = await getCurrentWalletConnected();
-    setWallet(address)
-    setStatus(status);
-    addWalletListener(); 
-  }
-  fetchData();
-}, []); // Or [] if effect doesn't need props or state
+    async function fetchData() {
+      // We await here
+      const { address, status } = await getCurrentWalletConnected();
+      setWallet(address)
+      setStatus(status);
+      addWalletListener();
+    }
+    fetchData();
+  }, []); // Or [] if effect doesn't need props or state
 
 
   function addWalletListener() {
@@ -56,8 +56,8 @@ const Tokenize = (props) => {
           {" "}
           Oops!{" "}
           <a target="_blank" href={`https://metamask.io/download.html`}>
-              Kindly install Metamask virtual Ethereum wallet, to your
-              browser.
+            Kindly install Metamask virtual Ethereum wallet, to your
+            browser.
           </a>
         </p>
       );
@@ -65,13 +65,13 @@ const Tokenize = (props) => {
   }
 
 
-  const connectWalletPressed = async () => { 
+  const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
-    setWallet(walletResponse.address);   
+    setWallet(walletResponse.address);
   };
 
-  const onMintPressed = async () => { 
+  const onMintPressed = async () => {
     const { success, status } = await safeMint(url, name, description);
     setStatus(status);
     if (success) {
@@ -90,63 +90,63 @@ const Tokenize = (props) => {
           <div className="box">
           </div>
           <div className="inner_box">
-          <br></br>
+            <br></br>
             <h1 className="font-weight-normal grow">Create Smart Transcript</h1>
             <p id="instructions">
               Click on the button below to connect your institution's wallet
               and authorize tokenization of transcripts.
             </p>
-            
-              <button id="walletButton" onClick={connectWalletPressed}>
-                {walletAddress.length > 0 ? (
-                  "Connected: " +
-                  String(walletAddress).substring(0, 6) +
-                  "..." +
-                  String(walletAddress).substring(38)
-                ) : (
-                  <span>Connect Wallet</span>
-                )}
-              </button>
-              <br></br>
+
+            <button id="walletButton" onClick={connectWalletPressed}>
+              {walletAddress.length > 0 ? (
+                "Connected: " +
+                String(walletAddress).substring(0, 6) +
+                "..." +
+                String(walletAddress).substring(38)
+              ) : (
+                <span>Connect Wallet</span>
+              )}
+            </button>
+            <br></br>
           </div>
-                
-                  <p id="instructions">
-                    Kindly input name, comment, and link to official transcript or certificate 
-                    <br></br>
-                    copy for corresponding graduates before you click <span className="attention">Tokenize Transcript</span> below
-                  </p>
-                  <div className="Minter">
-                  <form>
-                    <h2>Link to transcript or certificate uploaded to a distributed storage </h2>
-                    <input id="placeholder"
-                      type="text"
-                      placeholder="sample: https://gateway.pinata.cloud/ipfs/<hash>"
-                      onChange={(event) => setURL(event.target.value)}
-                    />
-                    <h2>Name of Graduate/Student</h2>
-                    <input id="placeholder"
-                      type="text"
-                      placeholder="sample: Adeola David Adelakun"
-                      onChange={(event) => setName(event.target.value)}
-                    />
-                    <h2>Add Comments</h2>
-                    <input id="placeholder"
-                      type="text"
-                      placeholder="Format: Name of Institution, Faculty, Department, and Matriculation Details"
-                      onChange={(event) => setDescription(event.target.value)}
-                    />
-                  </form>
-                  <button id="walletButton" onClick={onMintPressed}>
-                    Tokenize Transcript
-                  </button>
-                  <p id="status">
-                    {status}
-                  </p>
-                </div>
+
+          <p id="instructions">
+            Kindly input name, comment, and link to official transcript or certificate
+            <br></br>
+            copy for corresponding graduates before you click <span className="attention">Tokenize Transcript</span> below
+          </p>
+          <div className="Minter">
+            <form>
+              <h2>Link to transcript or certificate uploaded to a distributed storage </h2>
+              <input id="placeholder"
+                type="text"
+                placeholder="sample: https://gateway.pinata.cloud/ipfs/<hash>"
+                onChange={(event) => setURL(event.target.value)}
+              />
+              <h2>Name of Graduate/Student</h2>
+              <input id="placeholder"
+                type="text"
+                placeholder="sample: Adeola David Adelakun"
+                onChange={(event) => setName(event.target.value)}
+              />
+              <h2>Add Comments</h2>
+              <input id="placeholder"
+                type="text"
+                placeholder="Format: Name of Institution, Faculty, Department, and Matriculation Details"
+                onChange={(event) => setDescription(event.target.value)}
+              />
+            </form>
+            <button id="walletButton" onClick={onMintPressed}>
+              Tokenize Transcript
+            </button>
+            <p id="status">
+              {status}
+            </p>
           </div>
         </div>
       </div>
-      );
+    </div>
+  );
 }
 
 export default Tokenize;
