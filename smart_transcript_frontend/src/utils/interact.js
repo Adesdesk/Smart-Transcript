@@ -6,8 +6,6 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey); 
 const contractABI = require('../smart_transcript_abi.json')
 const contractAddress = "0xaAb57c3Eaf3E07B4Ff25d1DF96b972fF764945F2";
-/*const contractAddress = "0x047256F2B6896404876D5eF8ecC361F5d7dE56Bc";*/
-
 
 
 export const connectWallet = async () => {
