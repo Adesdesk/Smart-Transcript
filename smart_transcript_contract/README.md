@@ -1,10 +1,4 @@
-This is the program logic behind the Smart-Transcript decentralized application. It is a solidity-based smart contract that enables institutions tokenize academic ranscripts and certificates of their graduates, making them available to the public on the ethereum blockchain.
+An improved (January 20, 2023) version of the Smart-Transcript smart contract with the revoke copy functionality restricted.
 
-*Tasks of interest*
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Successfully verified contract SmartTranscript on Etherscan.
+https://goerli.etherscan.io/address/0x73F9671506f3494F97F1e32Ca45810610b3704c5#code

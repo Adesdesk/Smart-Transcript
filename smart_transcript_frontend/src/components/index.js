@@ -1,9 +1,0 @@
-export { default as Navigation } from "./Navigation";
-export { default as Footer } from "./Footer";
-export { default as Home } from "./Home";
-export { default as Tokenize } from "./Tokenize";
-export { default as About } from "./About";
-export { default as Contact } from "./Contact";
-export { default as Verify } from "./Verify";
-export { default as HowTo } from "./HowTo";
-export { default as Blacklist } from "./Blacklist";
