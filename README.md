@@ -23,7 +23,7 @@ The on-chain record is retrievable with easy execution of the smart contract's f
 Institutions in real life do reserve the right to withdraw or revoke a previously issued certificate in a situtation where the bearer is found unworthy of such qualification. While blockchain transactions are ideally known as immutable, the Smart-Transcript DApp employs a call to the "burn" function of its smart contract source code in order to revoke previously tokenized documents. This ensures that institutions can retain all rights they reserved as applicable to the hard copy vital documents they have always issued. The following is a snapshot of the "Revoke Copy" dashboard where this feature can be executed.
 
 
-### The "Revoke Copy Dashboard"
+### The "Revoke Copy" Dashboard
 ![withdraw_copy_dashboard](https://user-images.githubusercontent.com/101281102/214310202-2c11f2d0-f540-4975-a3df-48cbe6e66926.JPG)
 
 
