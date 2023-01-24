@@ -14,7 +14,7 @@ Smart-Transcript uses a Next.js-based user interface via which users, mainly han
 ![smart_transcript_home](https://user-images.githubusercontent.com/101281102/214306233-dd04e2ca-5633-4cac-aacd-df4ad87603b8.JPG)
 
 
-### The "Toenize" Dashboard
+### The "Tokenize" Dashboard
 ![Tokenize_dashboard](https://user-images.githubusercontent.com/101281102/214308315-61a8d4c9-1a67-455d-9831-7682a0ce589d.JPG)
 
 
