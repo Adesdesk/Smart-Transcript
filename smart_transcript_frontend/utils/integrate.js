@@ -1,10 +1,12 @@
 import React from 'react';
-import { pinJSONToIPFS } from './pinata.js';
-const alchemyKey = "https://eth-goerli.g.alchemy.com/v2/zDVopI9bKu4AMOsJc6RnlYfReVlfSRCH"
+require('dotenv').config();
+import { pinJSONToIPFS } from './record_to_pinata.js';
+const alchemyKey = process.env.ALCHEMY_KEY;
+/*const alchemyKey = "https://eth-goerli.g.alchemy.com/v2/zDVopI9bKu4AMOsJc6RnlYfReVlfSRCH"*/
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 const contractAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
-const contractABI = require('../utils/SmartTranscript.json');
+const contractABI = require('./SmartTranscript.json');
 
 
 

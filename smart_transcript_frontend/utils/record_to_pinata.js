@@ -1,8 +1,9 @@
 import axios from 'axios';
-const key = "b0b8a0096bc4b4957cc4";
-const secret = "e8ff08a04ce87e3171d5482fe6aae97ad6c60cc15ec72889aaccfe4f4b95947d";
-/*const axios = require('axios');*/
-
+require('dotenv').config();
+const key = process.env.PINATA_API_KEY;
+const secret = process.env.PINATA_SECRET;
+/*const key = "b0b8a0096bc4b4957cc4";
+const secret = "e8ff08a04ce87e3171d5482fe6aae97ad6c60cc15ec72889aaccfe4f4b95947d";*/
 
 
 export const pinJSONToIPFS = async (JSONBody) => {

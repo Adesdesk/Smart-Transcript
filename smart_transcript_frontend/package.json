@@ -12,9 +12,13 @@
     "@alch/alchemy-web3": "^1.4.7",
     "@next/font": "13.1.1",
     "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
   }
 }

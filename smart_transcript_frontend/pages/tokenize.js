@@ -7,7 +7,7 @@ import {
   connectWallet,
   safeMint,
   getCurrentWalletConnected
-} from "../utils/interact.js";
+} from "../utils/integrate.js";
 
 const Tokenize = (props) => {
 

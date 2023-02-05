@@ -4,7 +4,8 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import React from 'react';
 import { useEffect, useState } from "react";
-const alchemyKey = "https://eth-goerli.g.alchemy.com/v2/zDVopI9bKu4AMOsJc6RnlYfReVlfSRCH"
+require('dotenv').config();
+const alchemyKey = process.env.ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 const contractABI = require('../utils/SmartTranscript.json');

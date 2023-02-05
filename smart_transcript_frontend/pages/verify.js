@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Link from "next/link";
+import Head from 'next/head';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
