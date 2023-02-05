@@ -34,7 +34,7 @@ function Navbar() {
       <div className="container0">
 
         <div className="body2">
-          <div id="circle" data-text="Smart-Transcript by Adesdesk "></div>
+          <div id="circle" data-text="Smart-Transcript by Adeola "></div>
         </div>
       
             <h1 className="brandname_a grow">Smart-Transcript</h1>
@@ -49,9 +49,6 @@ function Navbar() {
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}
         >
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
 
         <div>

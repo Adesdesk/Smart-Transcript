@@ -1,5 +1,5 @@
 import React from 'react';
-import { pinJSONToIPFS } from './pinata.js';
+import { pinJSONToIPFS } from './records_to_pinata.js';
 const alchemyKey = "https://eth-goerli.g.alchemy.com/v2/zDVopI9bKu4AMOsJc6RnlYfReVlfSRCH"
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);

@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import {
     connectWallet,
     getCurrentWalletConnected
-} from "../utils/interact.js";
+} from "../utils/integrate.js";
 
 
 const RevokeCopy = (props) => {
