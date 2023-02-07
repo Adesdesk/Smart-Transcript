@@ -21,6 +21,7 @@ const Metadata = (props) => {
   const [tokenUri, setTokenUri] = useState('')
   const [link, setLink] = useState('');
 
+  // a useEffect hook to manage connection to the wallet accross pages where necessary
   useEffect(() => {
     async function getTokenUri() {
       try {
@@ -31,7 +32,7 @@ const Metadata = (props) => {
         console.log(err)
       }
     }
-
+// check for input tokenId
     if (tokenId) {
       getTokenUri()
       setStatus("Click the button above to visit the generated link and see details of this copy.");

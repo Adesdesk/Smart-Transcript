@@ -10,6 +10,7 @@ const contractABI = require('../utils/SmartTranscript.json');
 
 // connect to metamask
 export const connectWallet = async () => {
+  // if metamask is found installed...
   if (window.ethereum) {
     try {
       const addressArray = await window.ethereum.request({
@@ -26,7 +27,7 @@ export const connectWallet = async () => {
         status: "Oops! " + err.message,
       };
     }
-  } else {
+  } else { // Case that metamask is not yet installed
     return {
       address: "",
       status: (
@@ -34,6 +35,7 @@ export const connectWallet = async () => {
           <p>
             {" "}
             Oops!{" "}
+            {/* redirect to first download and install metamask */}
             <a target="_blank" href={`https://metamask.io/download.html`}>
               Kindly install Metamask virtual Ethereum wallet, to your
               browser.
@@ -46,6 +48,7 @@ export const connectWallet = async () => {
 };
 
 
+// pick currently active wallet for connection
 export const getCurrentWalletConnected = async () => {
   if (window.ethereum) {
     try {
@@ -77,6 +80,7 @@ export const getCurrentWalletConnected = async () => {
           <p>
             {" "}
             Oops!{" "}
+            {/* redirect to first download and install metamask */}
             <a target="_blank" href={`https://metamask.io/download.html`}>
               Get a virtual Ethereum wallet - Metamask installed, to your
               browser.
@@ -89,12 +93,7 @@ export const getCurrentWalletConnected = async () => {
 };
 
 
-// get instance of my contract
-/*async function loadContract() {
-  return new web3.eth.Contract(contractABI, contractAddress);
-}*/
-
-
+// call the safeMint function
 export const safeMint = async (document, candidate) => {
   if (document.trim() === "" || candidate.trim() === "") {
     return {
@@ -127,7 +126,7 @@ export const safeMint = async (document, candidate) => {
       .safeMint(window.ethereum.selectedAddress, tokenURI)
       .encodeABI(),
   };
-
+// output the transaction hash so user can access transaction details on the block explorer
   try {
     const txHash = await window.ethereum.request({
       method: "eth_sendTransaction",

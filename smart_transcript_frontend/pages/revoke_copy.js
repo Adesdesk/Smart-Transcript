@@ -24,6 +24,7 @@ const RevokeCopy = (props) => {
     const [candidate, setCandidate] = useState("");
     const [document, setDocument] = useState("");
 
+// a useEffect hook to manage connection to the wallet accross pages where necessary
     useEffect(() => {
         async function fetchData() {
             // We await here
@@ -36,6 +37,7 @@ const RevokeCopy = (props) => {
     }, []);
 
 
+    // detect active wallet
     function addWalletListener() {
         if (window.ethereum) {
             window.ethereum.on("accountsChanged", (accounts) => {
@@ -61,12 +63,14 @@ const RevokeCopy = (props) => {
         }
     }
 
+    // enable user to connect wallet
     const connectWalletPressed = async () => {
         const walletResponse = await connectWallet();
         setStatus(walletResponse.status);
         setWallet(walletResponse.address);
     };
 
+    // handle clicks on the "Revoke Copy" button
     const handleBurn = async () => {
         // grabbing an instance of the Smart_Transcript contract
         const contract = new web3.eth.Contract(contractABI, contractAddress);

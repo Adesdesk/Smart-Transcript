@@ -17,6 +17,7 @@ const Tokenize = (props) => {
   const [candidate, setCandidate] = useState("");
   const [document, setDocument] = useState("");
 
+  // a useEffect hook to manage connection to the wallet accross pages where necessary
   useEffect(() => {
     async function fetchData() {
       // We await here
@@ -28,7 +29,7 @@ const Tokenize = (props) => {
     fetchData();
   }, []);
 
-
+// detect active wallet
   function addWalletListener() {
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", (accounts) => {
@@ -54,13 +55,14 @@ const Tokenize = (props) => {
     }
   }
 
-
+// enable user to connect wallet
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
   };
 
+  // handle clicks on the "Tokenize" button
   const onMintPressed = async () => {
     const { success, status } = await safeMint(document, candidate);
     setStatus(status);
