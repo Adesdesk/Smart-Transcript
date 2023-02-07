@@ -1,6 +1,6 @@
 import axios from 'axios';
-const key = "b0b8a0096bc4b4957cc4";
-const secret = "e8ff08a04ce87e3171d5482fe6aae97ad6c60cc15ec72889aaccfe4f4b95947d";
+const key = process.env.NEXT_PUBLIC_PINATA_API_KEY
+const secret = process.env.NEXT_PUBLIC_PINATA_SECRET
 
 
 export const pinJSONToIPFS = async (JSONBody) => {
