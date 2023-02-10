@@ -69,10 +69,16 @@ function Developer() {
                 <li>Javascript for Beginners Specialization, University of California Davis</li>
                 <li>Java Programming and Software Engineering Fundamentals Specialization, Duke University</li>
                 <li>Blockchain Specialization, University of Buffalo, The State University of New York</li>
-                <li>Ethics of Technology, University of Notre Dame</li>
-                <li>Ethics of Communication - University of Notre Dame</li>
-                <li>Introduction to Public Speaking - University of Washington</li>
+                <li>Typescript - Learn the Fundamentals</li>
                 <li>Digital Marketing, Graphics, and Web Design – Bizmarrow Technologies, Gwarinpa, Abuja, Nigeria</li>
+                <br></br>
+                <li>Why Business? What is the Role of Business in a Just and Humane Society - University of Notre Dame</li>
+                <li>Ethics of Technology - University of Notre Dame</li>
+                <li>Ethics of Communication - University of Notre Dame</li>
+                <li>High Performance Collaboration: Leadership, Teamwork, and Negotiation - Northwestern University</li>
+                <li>Greek and Roman Mythology - University of Pennsylvania</li>
+                <li>Introduction to Public Speaking - University of Washington</li>
+                <li>Young African Leaders Initiative (YALI) Emerging Leaders Program - YALI Regional Leadership Center West Africa, Accra</li>
               </ul>
               Today, Adeola has various individual and collaborative software projects targeted at solving various
               problems, to his credit. His mantra, "there is code for every instruction, and logic behind every
