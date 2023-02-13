@@ -88,11 +88,13 @@ function Developer() {
               <ul className="certifications">
                 <li>Blockchain Technology / Web 3</li>
                 <li>Version Control</li>
+                <li>Tailwind CSS</li>
                 <li>Frontend Frameworks and Libraries</li>
                 <li>Full-stack Decentralized Applications Development</li>
                 <li>Algorithms Development</li>
                 <li>Responsive Design</li>
                 <li>Document Object Model</li>
+                <li>Hardhat, Truffle, Remix, Thirdweb</li>
                 <li>Solidity, Data Structures</li>
               </ul>
 
