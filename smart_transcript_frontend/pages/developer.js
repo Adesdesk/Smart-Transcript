@@ -72,9 +72,7 @@ function Developer() {
                 <li>Typescript - Learn the Fundamentals</li>
                 <li>Digital Marketing, Graphics, and Web Design – Bizmarrow Technologies, Gwarinpa, Abuja, Nigeria</li>
                 <br></br>
-                <li>Why Business? What is the Role of Business in a Just and Humane Society - University of Notre Dame</li>
-                <li>Ethics of Technology - University of Notre Dame</li>
-                <li>Ethics of Communication - University of Notre Dame</li>
+                <li>Ethical Leadership Specialization - University of Notre Dame</li>
                 <li>High Performance Collaboration: Leadership, Teamwork, and Negotiation - Northwestern University</li>
                 <li>Greek and Roman Mythology - University of Pennsylvania</li>
                 <li>Introduction to Public Speaking - University of Washington</li>
