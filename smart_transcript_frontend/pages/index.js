@@ -152,7 +152,7 @@ const Home = () => {
               a certificate invariably translates to invalidation of the corresponding academic transcript. The following feature of
               the Smart-Transcript dapp enables institutions to reserve the right to make such withdrawals.
               <br></br>
-              As is the case with blockchain transactions, this record of withdrawal becomes publicly accessible to the public and
+              As is the case with blockchain transactions, this record of withdrawal becomes publicly accessible to all, and
               the institution's integrity that backed earlier issued copies are immediately withdrawn. Institutions are advised to
               ensure adequate consideration of the decision to use this feature before actually doing so.
             </p>
