@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // add environment variables
+  // abstracted environment variables
   /*env: {
-
-    environment variables abstracted
     
   },*/
 }
