@@ -2,11 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   // add environment variables
-  env: {
-    
-    // abstracted
+  /*env: {
 
-  },
+    environment variables abstracted
+    
+  },*/
 }
 
 module.exports = nextConfig
