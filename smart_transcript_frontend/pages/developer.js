@@ -25,7 +25,7 @@ function Developer() {
           <br></br>
 
           <h1 className="font-weight-normal">Adeola David Adelakun</h1>
-          <h4 className="font-weight-normal">Full-stack Solidity Developer</h4>
+          <h4 className="font-weight-normal">Frontend / Solidity Developer</h4>
 
           <div className="icns">
             <Image
