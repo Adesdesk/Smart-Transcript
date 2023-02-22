@@ -84,7 +84,7 @@ const RevokeCopy = (props) => {
                 setBurnStatus(`Withdrawn. View transaction details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
             })
             .on('confirmation', (confirmationNumber, receipt) => {
-                if (confirmationNumber === 2) {
+                if (confirmationNumber === 2) {  // after 2 confirmations
                     setBurnStatus(`This copy has been successfully revoked! See details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
                 }
             })

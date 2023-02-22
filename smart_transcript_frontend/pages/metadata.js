@@ -35,7 +35,7 @@ const Metadata = (props) => {
 // check for input tokenId
     if (tokenId) {
       getTokenUri()
-      setStatus("Click the button above to visit the generated link and see details of this copy.");
+      setStatus("To see details of this copy, click the button above to visit the link after it is generated.");
     } else {
       setStatus("No new changes to your input tokenId detected");
     }

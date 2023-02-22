@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // add environment variables in .env.local
+  // add environment variables
+  
   /*env: {
 
     abstracted environment variables in .env.local
