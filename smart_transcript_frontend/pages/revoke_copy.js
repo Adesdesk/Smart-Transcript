@@ -5,13 +5,13 @@ import React from 'react';
 const alchemyKey = process.env.NEXT_PUBLIC_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
-const contractABI = require('../utils/SmartTranscript.json');
-const contractAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
+const smartTranscriptABI = require('../appendages/SmartTranscript.json');
+const smartTranscriptAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
 import { useEffect, useState } from "react";
 import {
     connectWallet,
     getCurrentWalletConnected
-} from "../utils/integrate.js";
+} from "../appendages/integrate.js";
 
 
 const RevokeCopy = (props) => {
@@ -73,7 +73,7 @@ const RevokeCopy = (props) => {
     // handle clicks on the "Revoke Copy" button
     const handleBurn = async () => {
         // grabbing an instance of the Smart_Transcript contract
-        const contract = new web3.eth.Contract(contractABI, contractAddress);
+        const contract = new web3.eth.Contract(smartTranscriptABI, smartTranscriptAddress);
 
         // to grab the account which will be used to call the burn function
         const account = await web3.eth.getAccounts();

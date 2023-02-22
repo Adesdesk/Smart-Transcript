@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 const alchemyKey = process.env.NEXT_PUBLIC_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
-const contractABI = require('../utils/SmartTranscript.json');
-const contractAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
+const smartTranscriptABI = require('../appendages/SmartTranscript.json');
+const smartTranscriptAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
 
 
 const Metadata = (props) => {
@@ -25,7 +25,7 @@ const Metadata = (props) => {
   useEffect(() => {
     async function getTokenUri() {
       try {
-        const contract = new web3.eth.Contract(contractABI, contractAddress)
+        const contract = new web3.eth.Contract(smartTranscriptABI, smartTranscriptAddress)
         const uri = await contract.methods.tokenURI(tokenId).call()
         setTokenUri(uri)
       } catch (err) {
