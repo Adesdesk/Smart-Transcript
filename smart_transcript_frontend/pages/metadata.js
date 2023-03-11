@@ -32,7 +32,7 @@ const Metadata = (props) => {
         console.log(err)
       }
     }
-// check for input tokenId
+    // check for input tokenId
     if (tokenId) {
       getTokenUri()
       setNotice("To see details of this copy, click the button above to visit the link after it is generated.");

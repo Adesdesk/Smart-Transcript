@@ -24,7 +24,7 @@ const RevokeCopy = (props) => {
     const [candidate, setCandidate] = useState("");
     const [document, setDocument] = useState("");
 
-// a useEffect hook to manage connection to the wallet accross pages where necessary
+    // a useEffect hook to manage connection to the wallet accross pages where necessary
     useEffect(() => {
         async function fetchData() {
             // We await here

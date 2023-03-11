@@ -29,7 +29,7 @@ const Tokenize = (props) => {
     fetchData();
   }, []);
 
-// detect active wallet
+  // detect active wallet
   function addWalletListener() {
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", (accounts) => {
@@ -55,7 +55,7 @@ const Tokenize = (props) => {
     }
   }
 
-// enable user to connect wallet
+  // enable user to connect wallet
   const walletConnectionPressed = async () => {
     const walletResponse = await walletConnection();
     setNotice(walletResponse.notice);
