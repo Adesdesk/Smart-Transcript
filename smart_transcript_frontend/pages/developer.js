@@ -49,7 +49,7 @@ function Developer() {
               <br></br>
               <h3>Professional Summary</h3>
               Adeola is the developer and pioneer of Smart-Transcript Decentralized Application. He is a solution-driven
-              Frontend and Solidity Developer with over 2 years of experience exploring the possibilities
+              Frontend and Solidity (full-stack) Developer with over 2 years of experience exploring the possibilities
               that a nexus between web 2 and web 3 brings. He is comfortable developing and working with full-stack
               decentralized applications, frontend web applications, and is skilled in adapting to new work situations
               and challenges to best provide tech solutions to real life problems.
