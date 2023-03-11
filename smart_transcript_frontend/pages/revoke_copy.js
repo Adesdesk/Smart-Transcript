@@ -9,8 +9,8 @@ const smartTranscriptABI = require('../appendages/SmartTranscript.json');
 const smartTranscriptAddress = '0x73F9671506f3494F97F1e32Ca45810610b3704c5';
 import { useEffect, useState } from "react";
 import {
-    connectWallet,
-    getCurrentWalletConnected
+    walletConnection,
+    connectCurrentWallet
 } from "../appendages/integrate.js";
 
 
@@ -28,7 +28,7 @@ const RevokeCopy = (props) => {
     useEffect(() => {
         async function fetchData() {
             // We await here
-            const { address, notice } = await getCurrentWalletConnected();
+            const { address, notice } = await connectCurrentWallet();
             setWallet(address)
             setNotice(notice);
             addWalletListener();
@@ -64,8 +64,8 @@ const RevokeCopy = (props) => {
     }
 
     // enable user to connect wallet
-    const connectWalletPressed = async () => {
-        const walletResponse = await connectWallet();
+    const walletConnectionPressed = async () => {
+        const walletResponse = await walletConnection();
         setNotice(walletResponse.notice);
         setWallet(walletResponse.address);
     };
@@ -118,7 +118,7 @@ const RevokeCopy = (props) => {
                                 and authorize permanent withdrawal of a previously tokenized copy.
                             </p>
 
-                            <button id="walletButton" onClick={connectWalletPressed}>
+                            <button id="walletButton" onClick={walletConnectionPressed}>
                                 {walletAddress.length > 0 ? (
                                     "Connected: " +
                                     String(walletAddress).substring(0, 6) +

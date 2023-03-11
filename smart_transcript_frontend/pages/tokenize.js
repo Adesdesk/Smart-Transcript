@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar';
 import React from 'react';
 import { useEffect, useState } from "react";
 import {
-  connectWallet,
+  walletConnection,
   safeMint,
-  getCurrentWalletConnected
+  connectCurrentWallet
 } from "../appendages/integrate.js";
 
 const Tokenize = (props) => {
@@ -21,7 +21,7 @@ const Tokenize = (props) => {
   useEffect(() => {
     async function fetchData() {
       // We await here
-      const { address, notice } = await getCurrentWalletConnected();
+      const { address, notice } = await connectCurrentWallet();
       setWallet(address)
       setNotice(notice);
       addWalletListener();
@@ -38,7 +38,7 @@ const Tokenize = (props) => {
           setNotice("Write something in the text-field above.");
         } else {
           setWallet("");
-          setNotice("Please link your Metamask using the <Connect wallet> button.");
+          setNotice("Please link your Metamask using the <Connect Wallet> button.");
         }
       });
     } else {
@@ -56,8 +56,8 @@ const Tokenize = (props) => {
   }
 
 // enable user to connect wallet
-  const connectWalletPressed = async () => {
-    const walletResponse = await connectWallet();
+  const walletConnectionPressed = async () => {
+    const walletResponse = await walletConnection();
     setNotice(walletResponse.notice);
     setWallet(walletResponse.address);
   };
@@ -97,7 +97,7 @@ const Tokenize = (props) => {
                 and authorize tokenization of transcripts.
               </p>
 
-              <button id="walletButton" onClick={connectWalletPressed}>
+              <button id="walletButton" onClick={walletConnectionPressed}>
                 {walletAddress.length > 0 ? (
                   "Connected: " +
                   String(walletAddress).substring(0, 6) +

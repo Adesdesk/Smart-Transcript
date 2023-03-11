@@ -82,6 +82,7 @@ function Guide() {
             <br></br>
             7. If you do not have metamask installed as a browser extension, you will be noticeed to do so. Simply follow the
             notices to complete the process.
+            <br></br>
             8. Once connected, mindfully input the earlier saved details from step 4, each in the appropriate field.
             <br></br>
             9. Double check to ensure accuracy of your input.

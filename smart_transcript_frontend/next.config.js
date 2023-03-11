@@ -6,7 +6,6 @@ const nextConfig = {
   
   env: {
 
-    
     /* abstracted */
     
   },
