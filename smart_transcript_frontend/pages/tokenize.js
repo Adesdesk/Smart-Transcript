@@ -13,7 +13,7 @@ const Tokenize = (props) => {
 
   // list of state variables
   const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState("");
+  const [notice, setNotice] = useState("");
   const [candidate, setCandidate] = useState("");
   const [document, setDocument] = useState("");
 
@@ -21,9 +21,9 @@ const Tokenize = (props) => {
   useEffect(() => {
     async function fetchData() {
       // We await here
-      const { address, status } = await getCurrentWalletConnected();
+      const { address, notice } = await getCurrentWalletConnected();
       setWallet(address)
-      setStatus(status);
+      setNotice(notice);
       addWalletListener();
     }
     fetchData();
@@ -35,14 +35,14 @@ const Tokenize = (props) => {
       window.ethereum.on("accountsChanged", (accounts) => {
         if (accounts.length > 0) {
           setWallet(accounts[0]);
-          setStatus("Write something in the text-field above.");
+          setNotice("Write something in the text-field above.");
         } else {
           setWallet("");
-          setStatus("Please link your Metamask using the <Connect wallet> button.");
+          setNotice("Please link your Metamask using the <Connect wallet> button.");
         }
       });
     } else {
-      setStatus(
+      setNotice(
         <p>
           {" "}
           Oops!{" "}
@@ -58,14 +58,14 @@ const Tokenize = (props) => {
 // enable user to connect wallet
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
-    setStatus(walletResponse.status);
+    setNotice(walletResponse.notice);
     setWallet(walletResponse.address);
   };
 
   // handle clicks on the "Tokenize" button
   const onMintPressed = async () => {
-    const { success, status } = await safeMint(document, candidate);
-    setStatus(status);
+    const { success, notice } = await safeMint(document, candidate);
+    setNotice(notice);
     if (success) {
       setCandidate("");
       setDocument("");
@@ -135,8 +135,8 @@ const Tokenize = (props) => {
               <button id="walletButton" onClick={onMintPressed}>
                 Tokenize Transcript
               </button>
-              <p id="status">
-                {status}
+              <p id="notice">
+                {notice}
               </p>
             </div>
           </div>

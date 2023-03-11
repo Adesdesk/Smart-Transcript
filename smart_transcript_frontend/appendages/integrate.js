@@ -1,5 +1,5 @@
 import React from 'react';
-import { pinJSONToIPFS } from './records_to_pinata.js';
+import { JSONOnIPFS } from './records_to_pinata.js';
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const alchemyKey = process.env.NEXT_PUBLIC_ALCHEMY_KEY;
 const web3 = createAlchemyWeb3(alchemyKey);
@@ -17,20 +17,20 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       });
       const obj = {
-        status: "Kindly fill the above input-field appropriately.",
+        notice: "Kindly fill the above input-field appropriately.",
         address: addressArray[0],
       };
       return obj;
     } catch (err) {
       return {
         address: "",
-        status: "Oops! " + err.message,
+        notice: "Oops! " + err.message,
       };
     }
   } else { // Case that metamask is not yet installed
     return {
       address: "",
-      status: (
+      notice: (
         <span>
           <p>
             {" "}
@@ -58,24 +58,24 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "Kindly input appropriate details in the above input-field.",
+          notice: "Kindly input appropriate details in the above input-field.",
         };
       } else {
         return {
           address: "",
-          status: "Please connect an Ethereum wallet by clicking the first button above",
+          notice: "Please connect an Ethereum wallet by clicking the first button above",
         };
       }
     } catch (err) {
       return {
         address: "",
-        status: "Oops! " + err.message,
+        notice: "Oops! " + err.message,
       };
     }
   } else {
     return {
       address: "",
-      status: (
+      notice: (
         <span>
           <p>
             {" "}
@@ -98,7 +98,7 @@ export const safeMint = async (document, candidate) => {
   if (document.trim() === "" || candidate.trim() === "") {
     return {
       success: false,
-      status: "Kindly fill all fields before you mint.",
+      notice: "Kindly fill all fields before you mint.",
     };
   }
 
@@ -108,11 +108,11 @@ export const safeMint = async (document, candidate) => {
   metadata.candidate = candidate;
   metadata.document = document;
 
-  const pinataResponse = await pinJSONToIPFS(metadata);
+  const pinataResponse = await JSONOnIPFS(metadata);
   if (!pinataResponse.success) {
     return {
       success: false,
-      status: "Oops! Something went wrong with your tokenURI.",
+      notice: "Oops! Something went wrong with your tokenURI.",
     };
   }
   const tokenURI = pinataResponse.pinataUrl;
@@ -134,14 +134,14 @@ export const safeMint = async (document, candidate) => {
     });
     return {
       success: true,
-      status:
+      notice:
         "Document tokenized successfully. View transaction details on Etherscan: https://goerli.etherscan.io/tx/" +
         txHash,
     };
   } catch (error) {
     return {
       success: false,
-      status: "Aww! Something didn't go right: " + error.message,
+      notice: "Aww! Something didn't go right: " + error.message,
     };
   }
 };

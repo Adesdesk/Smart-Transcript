@@ -4,7 +4,7 @@ const secret = process.env.NEXT_PUBLIC_PINATA_SECRET
 
 
 // creating a database of all successful tokens to pinata
-export const pinJSONToIPFS = async (JSONBody) => {
+export const JSONOnIPFS = async (JSONBody) => {
     const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
     // making an axios POST request to Pinata
     return axios

@@ -49,7 +49,7 @@ function Guide() {
 
             <br></br>
             <h3>Option 1 - Tokenize</h3>
-            <span id="status">The following feature executes an on-chain transaction that requires payment of gas fees.</span>
+            <span id="notice">The following feature executes an on-chain transaction that requires payment of gas fees.</span>
             <h3>To tokenize a copy, you are required to:</h3>
 
             1. ensure first that such a copy is authentic and ready to
@@ -80,8 +80,8 @@ function Guide() {
             6. Click the "Connect Wallet" button up the page to automatically connect with your pre-installed metamask
             wallet which will enable you proceeed with the transaction.
             <br></br>
-            7. If you do not have metamask installed as a browser extension, you will be prompted to do so. Simply follow the
-            prompts to complete the process.
+            7. If you do not have metamask installed as a browser extension, you will be noticeed to do so. Simply follow the
+            notices to complete the process.
             8. Once connected, mindfully input the earlier saved details from step 4, each in the appropriate field.
             <br></br>
             9. Double check to ensure accuracy of your input.
@@ -103,7 +103,7 @@ function Guide() {
             <br></br>
             <br></br>
             <h3>Option 2 - Verify Copy</h3>
-            <span id="status">The following feature does not require payments of any kind.</span>
+            <span id="notice">The following feature does not require payments of any kind.</span>
             <h3>To verify a copy, you are required to:</h3>
             1. Click on the "Verify Copy" button on the second capsule-shaped field on the Smart-Transcript home page to navigate to the
             verification dashboard.
@@ -117,7 +117,7 @@ function Guide() {
             <br></br>
             <br></br>
             <h3>Option 3 - Metadata </h3>
-            <span id="status">The following feature does not require payments of any kind.</span>
+            <span id="notice">The following feature does not require payments of any kind.</span>
             <h3>Sequel to verifying that a copy truly avails on the blockchain, this feature gives details of the holder and
               actual document </h3>
             1. Click on the "Metadata" button on the third capsule-shaped field on the Smart-Transcript home page to navigate to the
@@ -131,10 +131,10 @@ function Guide() {
             <br></br>
             <br></br>
             <h3>Option 4 - Revoke Copy </h3>
-            <span id="status">The following feature executes an on-chain transaction that requires payment of gas fees. Only 
+            <span id="notice">The following feature executes an on-chain transaction that requires payment of gas fees. Only 
             the address responsible for minting a token is authorized to revoke it.</span>
             <br></br>
-            <span id="status">It is emphasized that you ensure the decision to use this feature is final</span>
+            <span id="notice">It is emphasized that you ensure the decision to use this feature is final</span>
             <h3>In such rare cases when an institution wishes to withdraw a certification earlier issued to a graduate, this
               feature helps bring the same record onchain</h3>
             1. Click on the "Revoke Copy" button on the fourth capsule-shaped field on the Smart-Transcript home page to navigate to the

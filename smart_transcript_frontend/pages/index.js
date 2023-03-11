@@ -87,7 +87,7 @@ const Home = () => {
           <div>
             <h3 className="funfact">Hassle-free distribution and verification, yet confidential</h3>
             <p>Among the problems Smart-Transcript attempts to solve is that of complexities that could hinder
-              prompt, confidential dispatch of transcripts with certainty of their originality. The following dashboards
+              notice, confidential dispatch of transcripts with certainty of their originality. The following dashboards
               avail Smart-Transcript users two options which could be used by institutions or individuals to verify originality
               and true ownership of each tokenized copy in a matter of few minutes. Confidentiality is maintained by the fact that
               only parties with whom an address is shared are able to access relevant data. The immutability feature of the blockchain
@@ -106,7 +106,7 @@ const Home = () => {
             <div className='tc_styles'>
               <div className="grid two grow">
                 <p className="boxedText0">Anybody can verify authenticity of a copy of tokenized transcript or
-                  certificate using the token address an acclaimed owner presents.</p>
+                  certificate using the token address and tokenId presented by an acclaimed owner.</p>
                 <br></br>
                 <div>
                   <p className="boxedText1">If you do not adequately understand the above

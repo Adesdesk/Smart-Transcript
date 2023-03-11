@@ -4,11 +4,12 @@ const nextConfig = {
 
   // add environment variables
   
-  /*env: {
+  env: {
 
-    abstracted environment variables in .env.local
     
-  },*/
+    /* abstracted */
+    
+  },
 }
 
 module.exports = nextConfig

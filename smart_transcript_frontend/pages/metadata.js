@@ -15,7 +15,7 @@ const Metadata = (props) => {
 
   // list of state variables
   const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState('');
+  const [notice, setNotice] = useState('');
   const [tokenID, setTokenID] = useState('');
   const [tokenId, setTokenId] = useState('')
   const [tokenUri, setTokenUri] = useState('')
@@ -35,9 +35,9 @@ const Metadata = (props) => {
 // check for input tokenId
     if (tokenId) {
       getTokenUri()
-      setStatus("To see details of this copy, click the button above to visit the link after it is generated.");
+      setNotice("To see details of this copy, click the button above to visit the link after it is generated.");
     } else {
-      setStatus("No new changes to your input tokenId detected");
+      setNotice("No new changes to your input tokenId detected");
     }
 
   }, [tokenId])
@@ -100,8 +100,8 @@ const Metadata = (props) => {
                 <a className="metadata">Get Metadata</a>
               </Link>
               <br></br>
-              <p id="status">
-                {status}
+              <p id="notice">
+                {notice}
               </p>
             </div>
           </div>

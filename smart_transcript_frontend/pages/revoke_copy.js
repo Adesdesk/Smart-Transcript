@@ -16,11 +16,11 @@ import {
 
 const RevokeCopy = (props) => {
     // list of state variables
-    const [burnStatus, setBurnStatus] = useState(null);
+    const [burnNotice, setBurnNotice] = useState(null);
     const [tokenId, setTokenId] = useState('');
 
     const [walletAddress, setWallet] = useState("");
-    const [status, setStatus] = useState("");
+    const [notice, setNotice] = useState("");
     const [candidate, setCandidate] = useState("");
     const [document, setDocument] = useState("");
 
@@ -28,9 +28,9 @@ const RevokeCopy = (props) => {
     useEffect(() => {
         async function fetchData() {
             // We await here
-            const { address, status } = await getCurrentWalletConnected();
+            const { address, notice } = await getCurrentWalletConnected();
             setWallet(address)
-            setStatus(status);
+            setNotice(notice);
             addWalletListener();
         }
         fetchData();
@@ -43,14 +43,14 @@ const RevokeCopy = (props) => {
             window.ethereum.on("accountsChanged", (accounts) => {
                 if (accounts.length > 0) {
                     setWallet(accounts[0]);
-                    setStatus("Write something in the text-field above.");
+                    setNotice("Write something in the text-field above.");
                 } else {
                     setWallet("");
-                    setStatus("Please link your Metamask using the <Connect wallet> button.");
+                    setNotice("Please link your Metamask using the <Connect wallet> button.");
                 }
             });
         } else {
-            setStatus(
+            setNotice(
                 <p>
                     {" "}
                     Oops!{" "}
@@ -66,7 +66,7 @@ const RevokeCopy = (props) => {
     // enable user to connect wallet
     const connectWalletPressed = async () => {
         const walletResponse = await connectWallet();
-        setStatus(walletResponse.status);
+        setNotice(walletResponse.notice);
         setWallet(walletResponse.address);
     };
 
@@ -78,18 +78,18 @@ const RevokeCopy = (props) => {
         // to grab the account which will be used to call the burn function
         const account = await web3.eth.getAccounts();
 
-        // we invoke the burn function and set status for success or error cases
+        // we invoke the burn function and set notice for success or error cases
         contract.methods.burn(tokenId).send({ from: account[0] })
             .on('transactionHash', (hash) => {
-                setBurnStatus(`Withdrawn. View transaction details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
+                setBurnNotice(`Withdrawn. View transaction details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
             })
             .on('confirmation', (confirmationNumber, receipt) => {
                 if (confirmationNumber === 2) {  // after 2 confirmations
-                    setBurnStatus(`This copy has been successfully revoked! See details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
+                    setBurnNotice(`This copy has been successfully revoked! See details on Etherscan: https://goerli.etherscan.io/tx/${hash}`);
                 }
             })
             .on('error', (error) => {
-                setBurnStatus(`Error: ${error.message}`);
+                setBurnNotice(`Error: ${error.message}`);
             });
     }
 
@@ -151,7 +151,7 @@ const RevokeCopy = (props) => {
                             <button id="walletButton" onClick={handleBurn}>
                                 Revoke Copy
                             </button>
-                            {burnStatus && <p id="status">{burnStatus}</p>}
+                            {burnNotice && <p id="notice">{burnNotice}</p>}
                         </div>
 
 
@@ -164,4 +164,3 @@ const RevokeCopy = (props) => {
 };
 
 export default RevokeCopy;
-
