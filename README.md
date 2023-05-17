@@ -1,7 +1,7 @@
 # Smart-Transcript
-### A Decentralized Application by Adeola David Adelakun - January 2023 Version
+### A Decentralized Application by Adeola - January 2023 Version
 
-Smart-Transcript is a Decentralized Application proposed by Adeola David Adelakun to academic institutions and other categories of certificate issuing bodies for a smarter approach to managing the storage, retrieval, and distribution of their graduates' academic transcripts and certificates. This dApp takes advantage of the blockchain's decentralization, permanence, immutability, and transparency, to offer institutions a more efficient way to maintain copies of academic transcripts and other documents.
+Smart-Transcript is a Decentralized Application proposed by Adeola to academic institutions and other categories of certificate issuing bodies for a smarter approach to managing the storage, retrieval, and distribution of their graduates' academic transcripts and certificates. This dApp takes advantage of the blockchain's decentralization, permanence, immutability, and transparency, to offer institutions a more efficient way to maintain copies of academic transcripts and other documents.
 
 ### Smart-Transcript dapp is accessible online at [https://smart-transcript.vercel.app/](https://smart-transcript.vercel.app/)
 
