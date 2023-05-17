@@ -5,7 +5,7 @@ function Footer() {
     <div className="footerSpace">
       <footer className="footer0">
         <p className="footerTxt">
-          <span>Original idea, design and implementation by Adeola David Adelakun</span>
+          <span>Original idea, design and implementation by Adeola</span>
           <br></br>
           &copy; 2022. All rights reserved.
         </p>
