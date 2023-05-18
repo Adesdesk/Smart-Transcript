@@ -24,7 +24,7 @@ function About() {
               <h1 className="font-weight-normal" grow>About Smart-Transcript</h1>
               <p>
                 Smart-Transcript is a decentralized application, a brainchild
-                of Adeola David Adelakun. It is a vital tool with which tertiary
+                of Adeola. It is a vital tool with which tertiary
                 institutions around the world can tokenize their graduates' academic transcripts,
                 making them available on the blockchain. This eases a seamless transfer of transcripts
                 from institution to institution, especially for official reviews and
