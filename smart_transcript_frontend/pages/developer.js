@@ -24,8 +24,8 @@ function Developer() {
         <div className="container">
           <br></br>
 
-          <h1 className="font-weight-normal">Adeola David Adelakun</h1>
-          <h4 className="font-weight-normal">Full-stack Solidity Developer</h4>
+          <h1 className="font-weight-normal">Adeola</h1>
+          <h4 className="font-weight-normal">Full-stack Javascript and Solidity Developer</h4>
 
           <div className="icns">
             <Image
@@ -49,9 +49,9 @@ function Developer() {
               <br></br>
               <h3>Professional Summary</h3>
               Adeola is the developer and pioneer of Smart-Transcript Decentralized Application. He is a solution-driven
-              Frontend and Solidity (full-stack) Developer with over 2 years of experience exploring the possibilities
+              Full-stack Javascript and Solidity (full-stack) Developer with over 2 years of experience exploring the possibilities
               that a nexus between web 2 and web 3 brings. He is comfortable developing and working with full-stack
-              decentralized applications, frontend web applications, and is skilled in adapting to new work situations
+              decentralized applications, web applications, and is skilled in adapting to new work situations
               and challenges to best provide tech solutions to real life problems.
               <br></br>
               <br></br>
@@ -70,6 +70,7 @@ function Developer() {
                 <li>Java Programming and Software Engineering Fundamentals Specialization, Duke University</li>
                 <li>Blockchain Specialization, University of Buffalo, The State University of New York</li>
                 <li>Typescript - Learn the Fundamentals</li>
+                <li>Developing Backened Apps with Node.js and Express - IBM Skills Network</li>
                 <li>Digital Marketing, Graphics, and Web Design – Bizmarrow Technologies, Gwarinpa, Abuja, Nigeria</li>
                 <br></br>
                 <li>Ethical Leadership Specialization - University of Notre Dame</li>
@@ -90,6 +91,7 @@ function Developer() {
                 <li>Frontend Frameworks and Libraries</li>
                 <li>Full-stack Decentralized Applications Development</li>
                 <li>Algorithms Development</li>
+                <li>Node.js, Express.js</li>
                 <li>Responsive Design</li>
                 <li>Document Object Model</li>
                 <li>Hardhat, Truffle, Remix, Thirdweb</li>
