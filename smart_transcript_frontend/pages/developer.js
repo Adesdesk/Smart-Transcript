@@ -49,10 +49,10 @@ function Developer() {
               <br></br>
               <h3>Professional Summary</h3>
               Adeola is the developer and pioneer of Smart-Transcript Decentralized Application. He is a solution-driven
-              Full-stack Javascript and Solidity (full-stack) Developer with over 2 years of experience exploring the possibilities
+              Full-stack Javascript and Solidity Developer with over 2 years of experience exploring the possibilities
               that a nexus between web 2 and web 3 brings. He is comfortable developing and working with full-stack
               decentralized applications, web applications, and is skilled in adapting to new work situations
-              and challenges to best provide tech solutions to real life problems.
+              and challenges to best provide tech solutions to real life problems. 
               <br></br>
               <br></br>
 
@@ -65,9 +65,9 @@ function Developer() {
               <ul className="certifications">
                 <li>Python 3 Programming Specialization, University of Michigan</li>
                 <li>Introduction to Scripting in Python Specialization, Rice University</li>
-                <li>Coding for Everyone: C and C++ Specialization, University of California in Santa Cruz</li>
-                <li>Javascript for Beginners Specialization, University of California Davis</li>
-                <li>Java Programming and Software Engineering Fundamentals Specialization, Duke University</li>
+                <li>ETH Proof - Beginner, Intermediate, and Advance Level Solidity Developer Certifications by the Metacrafters Talent Hub</li>
+                <li>Poly Proof - Advance Level Certification in Polygon Proof of Stake, Polygon ID, and Polygon zkEVM</li>
+                <li>Javascript Specialization, University of California Davis</li>
                 <li>Blockchain Specialization, University of Buffalo, The State University of New York</li>
                 <li>Typescript - Learn the Fundamentals</li>
                 <li>Developing Backened Apps with Node.js and Express - IBM Skills Network</li>
