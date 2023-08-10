@@ -24,7 +24,7 @@ function Developer() {
         <div className="container">
           <br></br>
 
-          <h1 className="font-weight-normal">Adeola</h1>
+          <h1 className="font-weight-normal">Adeola David Adelakun</h1>
           <h4 className="font-weight-normal">Full-stack Javascript and Solidity Developer</h4>
 
           <div className="icns">
